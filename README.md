@@ -23,6 +23,7 @@ The repository owner is not responsible for any misuse or illegal activities per
     - [Vercel](#vercel)
 - [Documentation](#documentation)
     - [Home](#home)
+    - [search](#search)
     - [Recently added episodes](#recently-added-episodes)
     - [Specific Anime Info](#specific-anime-info)
     - [Episodes](#episodes)
@@ -99,3 +100,114 @@ const resp = await axios.get("/api");
 console.log(resp.data);
 ```
 ```javascript
+Updating soon.......
+```
+
+### Series 
+
+```bash
+GET /api/series
+```
+
+### 🔗 Endpoint
+
+```bash
+/api/series?page={Number}
+```
+
+#### Parameters
+
+| Parameter | Parameter-Type | Data-Type | Description | Mandatory ? | Default |
+| :-------: | :------------: | :-------: | :---------: | :---------: | :-----: |
+|   `page`  |    `query`     |   Number  |   page no.  |     No ✖️   |    1    |
+
+
+#### Example of request
+
+```javascript
+import axios from "axios";
+const resp = await axios.get("/api/search?page=13");
+console.log(resp.data);
+```
+
+### Sample response
+
+```javascript
+Updating soon.......
+```
+
+### Anime Stream Info
+
+```bash
+GET /api/stream
+```
+
+### 🔗 Endpoint
+
+```bash
+/api/stream?id={string}&season={Number}&ep={Number}
+```
+
+#### Parameters
+
+| Parameter | Parameter-Type | Data-Type | Description | Mandatory ? | Default |
+| :-------: | :------------: | :-------: | :---------: | :---------: | :-----: |
+|   `id`    |    `query`     |  string   |  anime_id   |    yes ✔️   |    --   |
+| `season`  |    `query`     |  Number   |  season no. |    yes ✔️   |    --   |
+|   `ep`    |    `query`     |  Number   | episode no. |    yes ✔️   |    --   |
+
+#### Example of request
+
+```javascript
+import axios from "axios";
+const resp = await axios.get("/api/stream?id=solo-leveling&season=2&ep=6");
+console.log(resp.data);
+```
+```javascript
+    {
+  "success": true,
+  "message": "Data Found!!",
+  "results": [
+    {
+      "server": "options-0",
+      "embed": "https://as-cdn21.top/video/1b5e669dd84003f7a70da7724e5cba93"
+    },
+    {
+      "server": "options-1",
+      "embed": "https://short.icu/r0ZKWZDhr"
+    },
+    {
+      "server": "options-2",
+      "embed": "https://rubystm.com/e/ietbgjyl1zqm.html"
+    },
+    {
+      "server": "options-3",
+      "embed": "https://cloudy.upns.one/#3vasgb"
+    },
+    {
+      "server": "options-4",
+      "embed": "https://strmup.to/dj6lpUVcgErtu"
+    },
+    {
+      "server": "options-5",
+      "embed": "https://turbovidhls.com/t/67c3d9c990671"
+    },
+    {
+      "server": "options-6",
+      "embed": "https://vidmoly.net/embed-43ypo7waxafa.html"
+    },
+    {
+      "server": "options-7",
+      "embed": "https://gdmirrorbot.nl/embed/iasiw1z"
+    },
+    {
+      "server": "options-8",
+      "embed": "https://gdmirrorbot.nl/embed/yefo5m7"
+    },
+    {
+      "server": "options-9",
+      "embed": "https://gdmirrorbot.nl/embed/y41xaiu"
+    }
+  ]
+}
+```
