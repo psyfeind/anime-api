@@ -4,6 +4,7 @@
 const home = require("./routes/home.routes.js")
 const search = require("./routes/search.routes.js")
 const newAddedEpisode = require("./routes/newnewAddedEpisode.routes.js")
+const info = require("./routes/info.routes.js")
 const stream = require("./routes/stream.routes.js")
 const series = require("./routes/series.routes.js")
 const express = require("express")
@@ -31,6 +32,7 @@ app.get("/", (req, res) => {
 app.use("/api", home)
 app.use("/api/search",search)
 app.use("/api/newadded",newAddedEpisode)
+app.use("/api/info",info)
 app.use("/api/series", series)
 app.use("/api/stream", stream)
 
