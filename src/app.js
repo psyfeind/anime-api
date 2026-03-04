@@ -8,8 +8,9 @@ const info = require("./routes/info.routes.js")
 const stream = require("./routes/stream.routes.js")
 const series = require("./routes/series.routes.js")
 const express = require("express")
+const cors = require("cors")
 const app = express()
-
+app.use(cors())
 /**
  * @desc    All Routes
  * @access  Public
