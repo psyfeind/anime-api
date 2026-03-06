@@ -4,7 +4,7 @@ const cheerio = require("cheerio");
 async function scrapeEpisodes(id, season=1) {
   try {
 
-    const url = `https://toonstream.dad/episode/${id}-${season}x1/`;
+    const url = `https://animesalt.top/episode/${id}-${season}x1/`;
     
 
     const { data } = await axios.get(url);
