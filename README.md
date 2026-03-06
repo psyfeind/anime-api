@@ -342,7 +342,7 @@ GET /api/episodes
 #### Example of request
 ```javascript
 import axios from "axios";
-const resp = await axios.get("/api/episodes?id=roll-over-and-die-i-will-fight-for-an-ordinary-life-with-my-love-and-cursed-sword&season=1");
+const resp = await axios.get("/api/episodes?id=jujutsu-kaisen&season=1");
 console.log(resp.data);
 ```
 
