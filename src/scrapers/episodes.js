@@ -1,50 +1,63 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 
-async function scrapeEpisodes(slug,season=1){
+async function scrapeEpisodes(id, season=1) {
+  try {
 
- try{
+    const url = `https://animesalt.top/episode/${id}-${season}x1/`;
+    
 
- const url = `https://multishows.top/episode/${slug}/${season}-1`;
+    const { data } = await axios.get(url);
 
- const {data} = await axios.get(url);
+    const $ = cheerio.load(data);
 
- const $ = cheerio.load(data);
+    let episodes = [];
 
- let episodes = [];
+    $("#episode_by_temp li").each((i, el) => {
 
- $(".mx-3 a").each((i,el)=>{
+      const title = $(el).find(".entry-title").text().trim();
 
- const link = $(el).attr("href");
+      const poster =
+        $(el).find("img").attr("data-src") ||
+        $(el).find("img").attr("src");
 
- if(!link.includes(`/${slug}/`)) return;
+      const link = $(el).find("a").attr("href");
 
- const last = link.split("/").pop(); // 1-1
+      // link se season x episode extract
+      let seasonNum = null;
+      let episodeNum = null;
 
- const [season,episode] = last.split("-");
+      if (link) {
+        const match = link.match(/(\d+)x(\d+)/);
 
- const title = $(el).find("div").last().text().trim();
+        if (match) {
+          seasonNum = match[1];
+          episodeNum = match[2];
+        }
+      }
 
- episodes.push({
- season:Number(season),
- episode:Number(episode),
- title:title
- });
+      episodes.push({
+        title,
+        season: seasonNum,
+        episode: episodeNum,
+        poster
+      });
 
- });
+    });
 
- return {
- anime:slug,
- totalEpisodes:episodes.length,
- episodes:episodes
- }
+    return {
+      totalEpisodes: episodes.length,
+      episodes
+    };
 
- }catch(err){
+  } catch (error) {
+    console.error("Scraper error:", error.message);
 
- console.log(err.message);
-
- }
-
+    return {
+      totalEpisodes: 0,
+      episodes: []
+    };
+  }
 }
 
-module.exports = scrapeEpisodes
+module.exports = scrapeEpisodes;

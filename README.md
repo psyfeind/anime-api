@@ -352,38 +352,151 @@ console.log(resp.data);
   "success": true,
   "message": "Data scraped!!",
   "results": {
-    "anime": "roll-over-and-die-i-will-fight-for-an-ordinary-life-with-my-love-and-cursed-sword",
-    "totalEpisodes": 6,
+    "totalEpisodes": 24,
     "episodes": [
       {
-        "season": 1,
-        "episode": 1,
-        "title": "The Beginning and the End"
+        "title": "Ryomen Sukuna",
+        "season": "1",
+        "episode": "1",
+        "poster": "https://img.animesalt.top/images/13743/01.webp"
       },
       {
-        "season": 1,
-        "episode": 2,
-        "title": "Coincidence and Fate"
+        "title": "For Myself",
+        "season": "1",
+        "episode": "2",
+        "poster": "https://img.animesalt.top/images/13743/02.webp"
       },
       {
-        "season": 1,
-        "episode": 3,
-        "title": "Purity and Corruption"
+        "title": "Girl of Steel",
+        "season": "1",
+        "episode": "3",
+        "poster": "https://img.animesalt.top/images/13743/03.webp"
       },
       {
-        "season": 1,
-        "episode": 4,
-        "title": "Darkness and Light"
+        "title": "Curse Womb Must Die",
+        "season": "1",
+        "episode": "4",
+        "poster": "https://img.animesalt.top/images/13743/04.webp"
       },
       {
-        "season": 1,
-        "episode": 5,
-        "title": "Cruelty and Camaraderie"
+        "title": "Curse Womb Must Die -II-",
+        "season": "1",
+        "episode": "5",
+        "poster": "https://img.animesalt.top/images/13743/05.webp"
       },
       {
-        "season": 1,
-        "episode": 6,
-        "title": "An Ordinary Life"
+        "title": "After Rain",
+        "season": "1",
+        "episode": "6",
+        "poster": "https://img.animesalt.top/images/13743/06.webp"
+      },
+      {
+        "title": "Assault",
+        "season": "1",
+        "episode": "7",
+        "poster": "https://img.animesalt.top/images/13743/07.webp"
+      },
+      {
+        "title": "Boredom",
+        "season": "1",
+        "episode": "8",
+        "poster": "https://img.animesalt.top/images/13743/08.webp"
+      },
+      {
+        "title": "Small Fry and Reverse Retribution",
+        "season": "1",
+        "episode": "9",
+        "poster": "https://img.animesalt.top/images/13743/09.webp"
+      },
+      {
+        "title": "Idle Transfiguration",
+        "season": "1",
+        "episode": "10",
+        "poster": "https://img.animesalt.top/images/13743/10.webp"
+      },
+      {
+        "title": "Narrow-minded",
+        "season": "1",
+        "episode": "11",
+        "poster": "https://img.animesalt.top/images/13743/11.webp"
+      },
+      {
+        "title": "To You, Someday",
+        "season": "1",
+        "episode": "12",
+        "poster": "https://img.animesalt.top/images/13743/12.webp"
+      },
+      {
+        "title": "Tomorrow",
+        "season": "1",
+        "episode": "13",
+        "poster": "https://img.animesalt.top/images/13743/13.webp"
+      },
+      {
+        "title": "Kyoto Sister School Exchange Event - Group Battle 0 -",
+        "season": "1",
+        "episode": "14",
+        "poster": "https://img.animesalt.top/images/13743/14.webp"
+      },
+      {
+        "title": "Kyoto Sister School Exchange Event - Group Battle 1 -",
+        "season": "1",
+        "episode": "15",
+        "poster": "https://img.animesalt.top/images/13743/15.webp"
+      },
+      {
+        "title": "Kyoto Sister School Exchange Event - Group Battle 2 -",
+        "season": "1",
+        "episode": "16",
+        "poster": "https://img.animesalt.top/images/13743/16.webp"
+      },
+      {
+        "title": "Kyoto Sister School Exchange Event - Group Battle 3 -",
+        "season": "1",
+        "episode": "17",
+        "poster": "https://img.animesalt.top/images/13743/17.webp"
+      },
+      {
+        "title": "Sage",
+        "season": "1",
+        "episode": "18",
+        "poster": "https://img.animesalt.top/images/13743/18.webp"
+      },
+      {
+        "title": "Black Flash",
+        "season": "1",
+        "episode": "19",
+        "poster": "https://img.animesalt.top/images/13743/19.webp"
+      },
+      {
+        "title": "Nonstandard",
+        "season": "1",
+        "episode": "20",
+        "poster": "https://img.animesalt.top/images/13743/20.webp"
+      },
+      {
+        "title": "Jujutsu Koshien",
+        "season": "1",
+        "episode": "21",
+        "poster": "https://img.animesalt.top/images/13743/21.webp"
+      },
+      {
+        "title": "The Origin of Blind Obedience",
+        "season": "1",
+        "episode": "22",
+        "poster": "https://img.animesalt.top/images/13743/22.webp"
+      },
+      {
+        "title": "The Origin of Blind Obedience - 2 -",
+        "season": "1",
+        "episode": "23",
+        "poster": "https://img.animesalt.top/images/13743/23.webp"
+      },
+      {
+        "title": "Accomplices",
+        "season": "1",
+        "episode": "24",
+        "poster": "https://img.animesalt.top/images/13743/24.webp"
       }
     ]
   }
