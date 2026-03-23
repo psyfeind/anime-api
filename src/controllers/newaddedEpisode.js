@@ -16,7 +16,7 @@ const newAddedController = async (req, res) => {
         const results = await newAddedEpisode();
 
         await redis.set(cacheKey, JSON.stringify(results), {
-            EX: 300   
+            ex: 300   
         });
 
         res.json({

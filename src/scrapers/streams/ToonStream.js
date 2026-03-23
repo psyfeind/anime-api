@@ -5,7 +5,6 @@ const default_Header = require("../../configs/headers.js");
 
 const toonstreamScraper = async (anime_id, season, episode) => {
     try {
-        // ✅ Encode anime_id for safety
         const episodeUrl = `${url}/episode/${encodeURIComponent(anime_id)}-${season}x${episode}`;
 
         const { data } = await axios.get(episodeUrl, {
@@ -15,8 +14,6 @@ const toonstreamScraper = async (anime_id, season, episode) => {
 
         const $ = cheerio.load(data);
         const servers = [];
-
-        // 🔥 Extract server iframe links
         $("#aa-options > div.video").each((_, el) => {
             let iframe =
                 $(el).find("iframe").attr("src") ||
@@ -36,7 +33,6 @@ const toonstreamScraper = async (anime_id, season, episode) => {
             return [];
         }
 
-        // 🚀 Parallel fetching for speed
         const finalResults = await Promise.all(
             servers.map(async (server) => {
                 try {
@@ -53,11 +49,7 @@ const toonstreamScraper = async (anime_id, season, episode) => {
                     let embed = null;
 
                     const baseReplace = (link) =>
-                        link.replace(
-                            "https://as-cdn21.top/video/",
-                            "https://as-cdn21.top/player/index.php?data="
-                        ) + "&do=getVideo";
-
+                        link
                     if (iframeSrc) {
                         embed = baseReplace(iframeSrc);
                     } else if (videoSrc) {
