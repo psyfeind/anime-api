@@ -175,7 +175,78 @@ console.log(resp.data);
   }
 }
 ```
+### episodes
+```bash
+GET /api/episode
+```
+### 🔗 Endpoint
 
+```bash
+/api/episode?id={string}&season={Number}
+```
+
+#### Parameters
+| Parameter | Parameter-Type | Data-Type | Description | Mandatory ? | Default |
+| :-------: | :------------: | :-------: | :---------: | :---------: | :-----: |
+|   `id`    |    `query`     |  string   |  anime_id   |    yes ✔️   |    --   |
+| `season`  |    `query`     |  Number   |   season    |     No ✖️   |    1    |
+
+
+#### Example of request
+```javascript
+import axios from "axios";
+const resp = await axios.get("/api/episode?id=jujutsu-kaisen&season=3");
+console.log(resp.data);
+```
+
+#### sample response
+
+```javascript
+{
+  "success": true,
+  "message": "data scraped!!",
+  "results": {
+    "totalSeasons": string,
+    "seasons": [objects],
+    "episodes": [objects]
+  }
+}
+```
+
+### specific anime info
+
+```bash
+GET /api/newadded
+```
+### 🔗 Endpoint
+
+```bash
+/api/newadded
+```
+#### Example of request
+```javascript
+import axios from "axios";
+const resp = await axios.get("/api/newadded");
+console.log(resp.data);
+```
+
+#### Sample of response
+```javascript
+{
+  "success": true,
+  "message": "Data Found!!",
+  "results": [
+    {
+      "title": string,
+      "anime_id": string,
+      "season": Number,
+      "episode": number,
+      "poster": string
+    }
+    
+  ]
+}
+```
 
 ### Recently added episodes
 

@@ -4,6 +4,7 @@
 const home = require("./routes/home.routes.js")
 const search = require("./routes/search.routes.js")
 const newAddedEpisode = require("./routes/newnewAddedEpisode.routes.js")
+const episode = require("./routes/episode.routes.js")
 const info = require("./routes/info.routes.js")
 const moviesInfo = require("./routes/movieStream.routes.js")
 const episode = require("./routes/episode.routes.js")
@@ -40,9 +41,13 @@ app.use("/api", home)
 app.use("/api/search",search)
 app.use("/api/newadded",newAddedEpisode)
 app.use("/api/info",info)
+<<<<<<< HEAD
 app.use("/api/movie",moviesInfo)
 app.use("/api/episodes",episode)
 app.use("/api/movies",movies)
+=======
+app.use("/api/episode",episode)
+>>>>>>> recovery-branch
 app.use("/api/series", series)
 app.use("/api/stream", stream)
 

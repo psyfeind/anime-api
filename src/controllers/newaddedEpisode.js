@@ -16,7 +16,11 @@ const newAddedController = async (req, res) => {
         const results = await newAddedEpisode();
 
         await redis.set(cacheKey, JSON.stringify(results), {
+<<<<<<< HEAD
             ex: 300
+=======
+            ex: 300   
+>>>>>>> recovery-branch
         });
 
         res.json({
