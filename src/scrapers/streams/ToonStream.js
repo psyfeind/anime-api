@@ -50,10 +50,7 @@ const toonstreamScraper = async (anime_id, season, episode) => {
 
                     const baseReplace = (link) =>
                         link
-<<<<<<< HEAD
 
-=======
->>>>>>> recovery-branch
                     if (iframeSrc) {
                         embed = baseReplace(iframeSrc);
                     } else if (videoSrc) {
