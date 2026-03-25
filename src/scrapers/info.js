@@ -39,7 +39,9 @@ const infiScraper = async(anime_id)=>{
         const seasons = $(".seasons").text().trim().replace("Seasons","").trim()
         const episodes = $(".entry-meta .episodes").text().trim().replace("Episodes","").trim()
         const rating = $(".vote-cn .vote").text().replace("TMDB","").trim()
-        let poster =
+        const imgTag = $(el).find("img");
+
+            let poster =
                 imgTag.attr("data-src") ||
                 imgTag.attr("data-lazy-src") ||
                 imgTag.attr("data-original") ||
