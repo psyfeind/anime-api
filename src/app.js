@@ -25,12 +25,7 @@ app.get("/", (req, res) => {
   res.json({
     success: true,
     message: {
-      Documentation: "For Documentation prefer to this repository https://github.com/Prathmesh6968/anime-api.git",
-      contacts: [
-        { telegram: "@Neonsenpaigalaxy" },
-        { instagram: "Use Nahi Karta" },
-        { x: "@PrathmeshAnbule" }
-      ]
+      Documentation: "For Documentation prefer to this repository https://github.com/Prathmesh6968/anime-api.git"
     }
   })
 })
