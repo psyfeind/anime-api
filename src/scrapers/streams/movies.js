@@ -41,9 +41,11 @@ const infiScraper = async (anime_id) => {
             rating,
             stream
         }
+        console.log(results)
         return results
     } catch (err) {
         console.log(err)
     }
 }
+infiScraper("miraculous-world-shanghai-the-legend-of-ladydragon")
 module.exports = infiScraper

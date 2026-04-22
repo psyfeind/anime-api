@@ -49,5 +49,4 @@ const moviesScraper = async (page = 1) => {
 
 
 }
-
 module.exports = moviesScraper
