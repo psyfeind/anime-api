@@ -69,7 +69,6 @@ const toonstreamScraper = async (anime_id, season, episode) => {
                 }
             })
         );
-        console.log(finalResults)
         return finalResults;
 
     } catch (err) {
@@ -77,5 +76,4 @@ const toonstreamScraper = async (anime_id, season, episode) => {
         return [];
     }
 };
-toonstreamScraper("solo-leveling",1,5)
 module.exports = toonstreamScraper;
