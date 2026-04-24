@@ -824,9 +824,7 @@ console.log(resp.data);
   }
 }
 ```
-```
 ### Genre
-
 ```bash
 GET /api/genre
 ```
