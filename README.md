@@ -39,7 +39,7 @@ The repository owner is not responsible for any misuse or illegal activities per
     - [Animes](#anime)
     - [Cartoons](#cartoons)
     - [Networks](#networks)
-    - [Genres](#genres)
+    - [Genres](#genre)
     - [Languages](#languages)
     - [Schedule](#schedule)
     - [Anime Stream Info](#anime-stream-info)
